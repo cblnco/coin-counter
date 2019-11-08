@@ -1,5 +1,9 @@
 # 🧩 Coin counter
 
+<p align="center">
+  <img height="190" src="./src/components/mysteryBlock/ActiveBlock.svg" alt="Mystery Block"/>
+</p>
+
 A simple React counter demo.  
 This project was created with [create-react-app](https://github.com/facebook/create-react-app).
 
@@ -27,9 +31,6 @@ The following example will set a limit of 10 coins and the animation duration wi
 ```jsx
 <Counter limit={10} animationTimeout={230} />
 ```
-
-There are other components you can play around, this project was made for that purpouse 👽
-
 
 ## ⚖️ License
 
