@@ -1,7 +1,7 @@
 # 🧩 Coin counter
 
 <p align="center">
-  <img height="190" src="./src/components/mysteryBlock/ActiveBlock.svg" alt="Mystery Block"/>
+  <img height="170" src="./src/components/mysteryBlock/ActiveBlock.svg" alt="Mystery Block"/>
 </p>
 
 A simple React counter demo.  
