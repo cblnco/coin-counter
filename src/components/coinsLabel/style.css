@@ -1,0 +1,35 @@
+/* Super Mario World Font */
+@font-face {
+  font-family: "Super Mario World";
+  src: url("//db.onlinewebfonts.com/t/02a99e0391b31368f7257aa7ed824d8a.eot");
+  src: url("//db.onlinewebfonts.com/t/02a99e0391b31368f7257aa7ed824d8a.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/02a99e0391b31368f7257aa7ed824d8a.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/02a99e0391b31368f7257aa7ed824d8a.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/02a99e0391b31368f7257aa7ed824d8a.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/02a99e0391b31368f7257aa7ed824d8a.svg#Super Mario World")
+      format("svg");
+}
+
+.App-Coin-label {
+  height: 2rem;
+  margin-bottom: -7px;
+}
+
+.App-Coin-label-symbol {
+  font-size: 1.3rem;
+}
+
+.App-Coin-label-text {
+  font-family: "Super Mario World";
+  font-size: 1.5rem;
+}
+
+.App-Coin-label-symbol,
+.App-Coin-label-text {
+  text-shadow: -4px 0 #1c1c1c, 0 4px #1c1c1c, 4px 0 #1c1c1c, 0 -4px #1c1c1c;
+  color: #c4d4a4;
+}
