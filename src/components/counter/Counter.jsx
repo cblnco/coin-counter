@@ -31,7 +31,6 @@ class Counter extends Component {
   };
 
   handleOnIncreaseClick = () => {
-    debugger
     if (this.state.counter < this.props.limit) {
       this.setState(prevState => ({
         counter: prevState.counter + 1,
