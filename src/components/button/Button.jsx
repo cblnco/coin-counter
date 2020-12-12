@@ -1,7 +1,7 @@
 import React from "react";
 import cn from "classnames";
 import PropTypes from "prop-types";
-import "./style.css";
+import "./Button.css";
 
 const Button = props => {
   const classNames = cn("App-button", props.className);

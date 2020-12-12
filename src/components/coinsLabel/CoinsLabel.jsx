@@ -1,7 +1,7 @@
 import React from "react";
 import Coin from "../coin/Coin";
 import PropTypes from "prop-types";
-import "./style.css";
+import "./CoinsLabel.css";
 
 const CoinsLabel = props => {
   const { number, padStart, padStr } = props;

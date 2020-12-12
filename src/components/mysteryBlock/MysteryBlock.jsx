@@ -3,7 +3,7 @@ import ActiveBlock from "./ActiveBlock.svg";
 import InactiveBlock from "./InactiveBlock.svg";
 import cn from "classnames";
 import PropTypes from "prop-types";
-import "./style.css";
+import "./MysteryBlock.css";
 
 const playMysteryBlockFX = () => {
   const mysteryBlockFX = new Audio(

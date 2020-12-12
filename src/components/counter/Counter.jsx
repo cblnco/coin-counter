@@ -4,7 +4,7 @@ import Coin from "../coin/Coin.jsx";
 import MysteryBlock from "../mysteryBlock/MysteryBlock";
 import Button from "../button/Button";
 import PropTypes from "prop-types";
-import "./style.css";
+import "./Counter.css";
 
 class Counter extends Component {
   constructor() {
