@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import ActiveBlock from "./ActiveBlock.svg";
 import InactiveBlock from "./InactiveBlock.svg";
 import cn from "classnames";
@@ -16,7 +16,7 @@ const MysteryBlock = props => {
   const { animation, active, alt } = props;
   const classNames = cn("App-Mistery-Block", { "margin-top": animation });
 
-  if (animation) {
+  if (animation && active) {
     playMysteryBlockFX();
   }
 
@@ -32,4 +32,4 @@ MysteryBlock.propTypes = {
   animation: PropTypes.bool.isRequired
 };
 
-export default MysteryBlock;
+export default memo(MysteryBlock);
