@@ -1,10 +1,10 @@
-# 🧩 Coin counter
+# 💰 Coin counter
 
 <p align="center">
   <img height="170" src="./src/components/mysteryBlock/ActiveBlock.svg" alt="Mystery Block"/>
 </p>
 
-A simple React counter demo.  
+A simple counter demo used to explay to React basics.
 This project was created with [create-react-app](https://github.com/facebook/create-react-app).
 
 ## 📦 Installation and usage
