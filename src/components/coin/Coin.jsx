@@ -2,7 +2,7 @@ import React from "react";
 import CoinSVG from "./Coin.svg";
 import cn from "classnames";
 import PropTypes from "prop-types";
-import "./style.css";
+import "./Coin.css";
 
 const playCoinFX = () => {
   const coinFX = new Audio(
