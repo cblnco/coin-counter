@@ -1,15 +1,9 @@
 import React from "react";
 import CoinSVG from "./Coin.svg";
+import soundBoard from "../../utils/soundBoard";
 import cn from "classnames";
 import PropTypes from "prop-types";
 import "./Coin.css";
-
-const playCoinFX = () => {
-  const coinFX = new Audio(
-    "https://themushroomkingdom.net/sounds/wav/smw/smw_coin.wav"
-  );
-  coinFX.play();
-};
 
 const Coin = props => {
   const { animation, defaultStyle, alt, className } = props;
@@ -20,7 +14,7 @@ const Coin = props => {
   );
 
   if (animation) {
-    playCoinFX();
+    soundBoard.playCoin();
   }
 
   return <img className={classNames} src={CoinSVG} alt={alt} />;
