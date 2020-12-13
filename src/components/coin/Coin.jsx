@@ -23,7 +23,7 @@ const Coin = props => {
     playCoinFX();
   }
 
-  return <img {...props} className={classNames} src={CoinSVG} alt={alt} />;
+  return <img className={classNames} src={CoinSVG} alt={alt} />;
 };
 
 Coin.propTypes = {
