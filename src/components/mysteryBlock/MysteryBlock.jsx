@@ -13,7 +13,7 @@ const playMysteryBlockFX = () => {
 };
 
 const MysteryBlock = props => {
-  const { animation, active, alt } = props;
+  const { id, animation, active, alt } = props;
   const classNames = cn("App-Mistery-Block", { "margin-top": animation });
 
   if (animation && active) {
@@ -21,7 +21,7 @@ const MysteryBlock = props => {
   }
 
   return (
-    <img {...props} className={classNames} animation={classNames} src={active ? ActiveBlock : InactiveBlock} alt={alt} />
+    <img id={id} className={classNames} animation={classNames} src={active ? ActiveBlock : InactiveBlock} alt={alt} />
   );
 };
 
