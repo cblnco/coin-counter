@@ -15,6 +15,10 @@ const Counter = ({ limit, animationTimeout }) => {
 
   // Effect to delay the prop update to set the block active or inactive.
   useEffect(() => {
+    if (counter > limit) {
+      setCounter(limit);
+    }
+    
     setTimeout(
       () => setIsMysteryBlockActive(counter < limit),
       animationTimeout
