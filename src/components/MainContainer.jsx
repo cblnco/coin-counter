@@ -6,16 +6,16 @@ import "../grid/simple-grid.min.css";
 import "./MainContainer.css";
 
 const MainContainer = () => {
-  let [counterLimit, setCounterLimit] = useState(10);
+  const [currentLimit, setCurrentLimit] = useState(20);
 
   return (
     <div className="App container">
       <div className="row">
         <Header title="React Coin Counter" />
-        <LimitHandler value={counterLimit} setValue={setCounterLimit} />
+        <LimitHandler id="limit_handler" limit={Number(currentLimit)} setLimit={setCurrentLimit} />
       </div>
       <div className="row">
-        <Counter limit={counterLimit} animationTimeout={230} />
+        <Counter limit={Number(currentLimit)} animationTimeout={230} />
       </div>
     </div>
   )
