@@ -1,9 +1,9 @@
 import React, { memo } from 'react';
+import cn from 'classnames';
+import PropTypes from 'prop-types';
 import ActiveBlock from './ActiveBlock.svg';
 import InactiveBlock from './InactiveBlock.svg';
 import soundBoard from '../../utils/soundBoard';
-import cn from 'classnames';
-import PropTypes from 'prop-types';
 import './MysteryBlock.css';
 
 const MysteryBlock = (props) => {
@@ -23,6 +23,11 @@ const MysteryBlock = (props) => {
       alt={alt}
     />
   );
+};
+
+MysteryBlock.defaultProps = {
+  id: 'mystery-block',
+  alt: 'Mystery Block',
 };
 
 MysteryBlock.propTypes = {

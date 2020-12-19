@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import Header from '../components/header/Header';
-import Counter from '../components/counter/Counter';
-import LimitHandler from '../components/limitHandler/LimitHandler';
+import Header from './header/Header';
+import Counter from './counter/Counter';
+import LimitHandler from './limitHandler/LimitHandler';
 import '../grid/simple-grid.min.css';
 import './MainContainer.css';
 

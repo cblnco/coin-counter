@@ -22,6 +22,10 @@
         "prettier"
     ],
     "rules": {
-        "prettier/prettier": "error"
+        "prettier/prettier": "error",
+        "no-undef": "off",
+        "object-curly-newline": "off",
+        "import/no-extraneous-dependencies": "off",
+        "react/jsx-filename-extension": "off"
     }
 }

@@ -1,6 +1,6 @@
 import React from 'react';
-import Coin from '../coin/Coin';
 import PropTypes from 'prop-types';
+import Coin from '../coin/Coin';
 import './CoinsLabel.css';
 
 const CoinsLabel = ({ number, padStart, padStr }) => (
@@ -11,8 +11,12 @@ const CoinsLabel = ({ number, padStart, padStr }) => (
   </div>
 );
 
+CoinsLabel.defaultProps = {
+  padStr: 1,
+};
+
 CoinsLabel.propTypes = {
-  padStr: PropTypes.string,
+  padStr: PropTypes.number,
   number: PropTypes.number.isRequired,
   padStart: PropTypes.number.isRequired,
 };

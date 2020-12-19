@@ -1,6 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
 import PropTypes from 'prop-types';
+import logo from './logo.svg';
 import './Header.css';
 
 const Header = ({ title }) => (

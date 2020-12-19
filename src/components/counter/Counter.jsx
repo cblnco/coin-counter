@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import CoinsLabel from '../coinsLabel/CoinsLabel';
-import Coin from '../coin/Coin.jsx';
+import Coin from '../coin/Coin';
 import MysteryBlock from '../mysteryBlock/MysteryBlock';
 import soundBoard from '../../utils/soundBoard';
 import Button from '../button/Button';
-import PropTypes from 'prop-types';
 import './Counter.css';
 
 const Counter = ({ limit, animationTimeout }) => {
@@ -83,6 +83,10 @@ const Counter = ({ limit, animationTimeout }) => {
       </div>
     </>
   );
+};
+
+Counter.defaultProps = {
+  animationTimeout: 200,
 };
 
 Counter.propTypes = {

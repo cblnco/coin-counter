@@ -1,9 +1,14 @@
 class SoundFX {
   #isSoundEnabled;
+
   #COIN_FX = 'https://themushroomkingdom.net/sounds/wav/smw/smw_coin.wav';
+
   #ERROR_FX = 'https://themushroomkingdom.net/sounds/wav/smw/smw_lemmy_wendy_incorrect.wav';
+
   #DECREASE_FX = 'https://themushroomkingdom.net/sounds/wav/smw/smw_stomp_bones.wav';
+
   #INCREASE_FX = 'https://themushroomkingdom.net/sounds/wav/smw/smw_stomp.wav';
+
   #BLOCK_KICK_FX = 'https://themushroomkingdom.net/sounds/wav/smw/smw_shell_ricochet.wav';
 
   constructor(isSoundEnabled) {

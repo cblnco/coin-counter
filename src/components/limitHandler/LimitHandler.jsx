@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { numberRegex } from '../../utils/regex';
 import { MIN, MAX } from '../../utils/constants';
 import soundBoard from '../../utils/soundBoard';
 import NumberField from '../numberField/NumberField';
 import './LimitHandler.css';
+
+const numberRegex = /^\d+$/;
 
 const LimitHandler = ({ id, limit, setLimit }) => {
   const onNumberFieldChange = (e) => {
@@ -61,6 +62,10 @@ const LimitHandler = ({ id, limit, setLimit }) => {
       />
     </div>
   );
+};
+
+LimitHandler.defaultProps = {
+  id: 'number-field',
 };
 
 LimitHandler.propTypes = {
