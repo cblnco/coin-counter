@@ -8,19 +8,4 @@ build_dir="build"
 
 cd "$GITHUB_WORKSPACE"
 
-git config user.name "$GITHUB_ACTOR"
-git config user.email "${GITHUB_ACTOR}@bots.github.com"
-git fetch
-git checkout "$target_branch"
-git rm -r *
-cp -r "/${build_dir}/*"
-git add -f *
-git commit -m "[Workflow]: Updated GitHub Pages."
-
-if [ $? -ne 0 ]; then
-    echo "No changes to commit"
-    exit 0
-fi
-
-git remote set-url "$remote_name" "$repo_uri"
-git push --force-with-lease "$remote_name" "$target_branch"
+ls -l
