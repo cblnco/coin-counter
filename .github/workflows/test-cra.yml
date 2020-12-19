@@ -4,7 +4,6 @@
 name: Test CRA with react-scripts.
 
 on:
-  push:
   pull_request:
     branches:
     - master
