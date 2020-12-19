@@ -4,12 +4,11 @@
   <img height="170" src="./src/components/mysteryBlock/ActiveBlock.svg" alt="Mystery Block"/>
 </p>
 
-A simple counter demo used to explain React basics.
+A counter demo used to explain React basics.
 <br />
-You can find an online demo right [**here**](https://cblnco.github.io/coin-counter/).
+You can find an online demo right <a href="https://cblnco.github.io/coin-counter/" target="_blank">**here**</a>.
 <br />
-<br />
-This project was created with [create-react-app](https://github.com/facebook/create-react-app).
+This project was created with <a href="https://github.com/facebook/create-react-app" target="_blank">create-react-app</a>.
 
 ## 📦 Installation and usage
 
