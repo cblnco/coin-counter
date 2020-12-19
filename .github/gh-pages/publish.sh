@@ -12,10 +12,11 @@ cd "$GITHUB_WORKSPACE"
 git config user.name "cblnco"
 git config user.email "$MAINTANER_EMAIL"
 
+git fetch
 git checkout "$target_branch"
 git rebase "${remote_name}/${main_branch}"
 
-git add "$build_dir"
+git add -f "$build_dir"
 
 git commit -m "[Workflow]: Updated GitHub Pages."
 if [ $? -ne 0 ]; then
