@@ -28,7 +28,7 @@ jobs:
       run: yarn build
     
     - name: Publish to gh-pages branch.
-      run: .github/gh-pages/publish.sh
+      run: sh ./.github/gh-pages/publish.sh
       env:
           DEPLOY_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
           MAINTANER_EMAIL: ${{ secrets.MAINTANER_EMAIL }}
