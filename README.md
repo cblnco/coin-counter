@@ -6,6 +6,9 @@
 
 A simple counter demo used to explain React basics.
 <br />
+You can find an online demo right [**here**](https://cblnco.github.io/coin-counter/).
+<br />
+<br />
 This project was created with [create-react-app](https://github.com/facebook/create-react-app).
 
 ## 📦 Installation and usage
