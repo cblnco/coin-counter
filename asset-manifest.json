@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/coin-counter/static/css/main.5a0d7e20.chunk.css",
+    "main.js": "/coin-counter/static/js/main.0a89f73c.chunk.js",
+    "main.js.map": "/coin-counter/static/js/main.0a89f73c.chunk.js.map",
+    "runtime-main.js": "/coin-counter/static/js/runtime-main.f93f1bc8.js",
+    "runtime-main.js.map": "/coin-counter/static/js/runtime-main.f93f1bc8.js.map",
+    "static/js/2.4c4c8b76.chunk.js": "/coin-counter/static/js/2.4c4c8b76.chunk.js",
+    "static/js/2.4c4c8b76.chunk.js.map": "/coin-counter/static/js/2.4c4c8b76.chunk.js.map",
+    "index.html": "/coin-counter/index.html",
+    "static/css/main.5a0d7e20.chunk.css.map": "/coin-counter/static/css/main.5a0d7e20.chunk.css.map",
+    "static/js/2.4c4c8b76.chunk.js.LICENSE.txt": "/coin-counter/static/js/2.4c4c8b76.chunk.js.LICENSE.txt",
+    "static/media/ActiveBlock.1f117f61.svg": "/coin-counter/static/media/ActiveBlock.1f117f61.svg",
+    "static/media/Coin.ba5d8f5a.svg": "/coin-counter/static/media/Coin.ba5d8f5a.svg",
+    "static/media/InactiveBlock.d68a21e6.svg": "/coin-counter/static/media/InactiveBlock.d68a21e6.svg",
+    "static/media/logo.927f1d60.svg": "/coin-counter/static/media/logo.927f1d60.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f93f1bc8.js",
+    "static/js/2.4c4c8b76.chunk.js",
+    "static/css/main.5a0d7e20.chunk.css",
+    "static/js/main.0a89f73c.chunk.js"
+  ]
+}
