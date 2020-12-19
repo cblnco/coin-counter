@@ -9,8 +9,8 @@ build_dir="build"
 
 cd "$GITHUB_WORKSPACE"
 
-git config user.name "cblnco"
-git config user.email "$MAINTANER_EMAIL"
+git config user.name "$GITHUB_ACTOR"
+git config user.email "${GITHUB_ACTOR}@bots.github.com"
 
 git fetch
 git checkout "$target_branch"
