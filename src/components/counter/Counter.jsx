@@ -1,129 +1,101 @@
-import React, { Fragment, Component } from "react";
+import React, { useState, useEffect } from "react";
 import CoinsLabel from "../coinsLabel/CoinsLabel";
 import Coin from "../coin/Coin.jsx";
 import MysteryBlock from "../mysteryBlock/MysteryBlock";
+import soundBoard from "../../utils/soundBoard";
 import Button from "../button/Button";
 import PropTypes from "prop-types";
-import "./style.css";
+import "./Counter.css";
 
-class Counter extends Component {
-  constructor() {
-    super();
+const Counter = ({ limit, animationTimeout }) => {
+  const [counter, setCounter] = useState(0);
+  const [coinAnimation, setCoinAnimation] = useState(false);
+  const [isMysteryBlockActive, setIsMysteryBlockActive] = useState(true);
+  const [mysteryBlockAnimation, setMysteryBlockAnimation] = useState(false);
 
-    this.state = {
-      counter: 0,
-      coinAnimation: false,
-      isMysteryBlockActive: true,
-      mysteryBlockAnimation: false
-    };
-  }
-
-  removeAnimations = () => {
+  // Effect to delay the prop update to set the block active or inactive.
+  useEffect(() => {
+    if (counter > limit) {
+      setCounter(limit);
+    }
+    
     setTimeout(
-      () =>
-        this.setState((prevState, props) => ({
-          isMysteryBlockActive: prevState.counter < props.limit,
-          coinAnimation: false,
-          mysteryBlockAnimation: false
-        })),
-      this.props.animationTimeout
+      () => setIsMysteryBlockActive(counter < limit),
+      animationTimeout
+    );
+  }, [counter, animationTimeout, limit]);
+
+  const removeAnimations = () => {
+    setTimeout(
+      () => {
+        setCoinAnimation(false);
+        setMysteryBlockAnimation(false);
+      },
+      animationTimeout
     );
   };
 
-  handleOnIncreaseClick = () => {
-    debugger
-    if (this.state.counter < this.props.limit) {
-      this.setState(prevState => ({
-        counter: prevState.counter + 1,
-        coinAnimation: true,
-        mysteryBlockAnimation: true,
-        isMysteryBlockActive: true
-      }), this.removeAnimations());
-
-
+  const handleOnIncreaseClick = () => {
+    if (counter < limit) {
+      setCounter(counter + 1);
+      setCoinAnimation(true);
+      setMysteryBlockAnimation(true);
+      removeAnimations();
     } else {
-      this.setState({ mysteryBlockAnimation: true });
-      setTimeout(() => this.setState({ mysteryBlockAnimation: false }), this.props.animationTimeout);
+      soundBoard.playError();
+      setMysteryBlockAnimation(true);
+      setTimeout(() => {
+        setMysteryBlockAnimation(false);
+      },
+        animationTimeout);
+
     }
   };
 
-  handleOnDecreaseClick = () => {
-    if (this.state.counter > 0) {
-      this.setState((prevState, props) => ({
-        counter: prevState.counter - 1,
-        isMysteryBlockActive: prevState.counter <= props.limit
-      }));
-      const decrementFX = new Audio(
-        "https://themushroomkingdom.net/sounds/wav/smw/smw_stomp_bones.wav"
-      );
-      decrementFX.play();
+  const handleOnDecreaseClick = () => {
+    if (counter > 0) {
+      setCounter(counter - 1);
+      soundBoard.playDecrease();
     } else {
-      const disabledFX = new Audio(
-        "https://themushroomkingdom.net/sounds/wav/smw/smw_lemmy_wendy_incorrect.wav"
-      );
-      disabledFX.play();
+      soundBoard.playError();
     }
   };
 
-
-  handleOnButtonClick = event => {
-    const actionMap = {
-      increase: 1,
-      decrease: -1
-    }
-    const actionType = event.target.getAttribute("action");
-
-    this.setState(prevState => ({
-      counter: prevState.counter + actionMap[actionType]
-    }))
-  }
-
-
-  render() {
-    const {
-      counter,
-      coinAnimation,
-      isMysteryBlockActive,
-      mysteryBlockAnimation
-    } = this.state;
-
-    return (
-      <Fragment>
-        <div className="row">
-          <CoinsLabel number={counter} padStart={5} padStr="0" />
+  return (
+    <>
+      <div className="row">
+        <CoinsLabel number={counter} padStart={4} padStr="0" />
+      </div>
+      <div className="row App-Mystery-Block-row">
+        <Coin
+          id="main_coin"
+          defaultStyle
+          animation={coinAnimation}
+          alt="Coin"
+        />
+        <MysteryBlock
+          id="mystery_block"
+          active={isMysteryBlockActive}
+          animation={mysteryBlockAnimation}
+          alt="Mystery Block"
+        />
+      </div>
+      <div className="row">
+        <div className="col-4" />
+        <div className="col-2">
+          <Button id="decrease_button" onClick={handleOnDecreaseClick}>
+            Decrease
+          </Button>
         </div>
-        <div className="row App-Mystery-Block-row">
-          <Coin
-            id="main_coin"
-            defaultStyle
-            animation={coinAnimation}
-            alt="Coin"
-          />
-          <MysteryBlock
-            id="mystery_block"
-            active={isMysteryBlockActive}
-            animation={mysteryBlockAnimation}
-            alt="Mystery Block"
-          />
+        <div className="col-2">
+          <Button id="increase_button" className="increase-button" onClick={handleOnIncreaseClick}>
+            Increase
+          </Button>
         </div>
-        <div className="row">
-          <div className="col-4" />
-          <div className="col-2">
-            <Button action="increase" id="increase_button" onClick={this.handleOnIncreaseClick}>
-              Increase
-            </Button>
-          </div>
-          <div className="col-2">
-            <Button action="decrease" id="decrease_button" onClick={this.handleOnDecreaseClick}>
-              Decrease
-            </Button>
-           
-          </div>
-          <div className="col-4" />
-        </div>
-      </Fragment>
-    );
-  }
+        <div className="col-4" />
+      </div>
+    </>
+  );
 }
 
 Counter.propTypes = {

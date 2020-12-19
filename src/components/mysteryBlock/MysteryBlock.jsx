@@ -1,27 +1,21 @@
-import React from "react";
+import React, { memo } from "react";
 import ActiveBlock from "./ActiveBlock.svg";
 import InactiveBlock from "./InactiveBlock.svg";
+import soundBoard from "../../utils/soundBoard";
 import cn from "classnames";
 import PropTypes from "prop-types";
-import "./style.css";
-
-const playMysteryBlockFX = () => {
-  const mysteryBlockFX = new Audio(
-    "https://themushroomkingdom.net/sounds/wav/smw/smw_shell_ricochet.wav"
-  );
-  mysteryBlockFX.play();
-};
+import "./MysteryBlock.css";
 
 const MysteryBlock = props => {
-  const { animation, active, alt } = props;
+  const { id, animation, active, alt } = props;
   const classNames = cn("App-Mistery-Block", { "margin-top": animation });
 
-  if (animation) {
-    playMysteryBlockFX();
+  if (animation && active) {
+    soundBoard.playBlockKick();
   }
 
   return (
-    <img {...props} className={classNames} animation={classNames} src={active ? ActiveBlock : InactiveBlock} alt={alt} />
+    <img id={id} className={classNames} animation={classNames} src={active ? ActiveBlock : InactiveBlock} alt={alt} />
   );
 };
 
@@ -32,4 +26,4 @@ MysteryBlock.propTypes = {
   animation: PropTypes.bool.isRequired
 };
 
-export default MysteryBlock;
+export default memo(MysteryBlock);
