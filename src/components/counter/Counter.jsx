@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import CoinsLabel from "../coinsLabel/CoinsLabel";
 import Coin from "../coin/Coin.jsx";
 import MysteryBlock from "../mysteryBlock/MysteryBlock";
+import soundBoard from "../../utils/soundBoard";
 import Button from "../button/Button";
 import PropTypes from "prop-types";
 import "./Counter.css";
@@ -14,18 +15,15 @@ const Counter = ({ limit, animationTimeout }) => {
 
   // Effect to delay the prop update to set the block active or inactive.
   useEffect(() => {
+    if (counter > limit) {
+      setCounter(limit);
+    }
+    
     setTimeout(
       () => setIsMysteryBlockActive(counter < limit),
       animationTimeout
     );
   }, [counter, animationTimeout, limit]);
-
-  const playIncorrectFX = () => {
-    const incorrectFX = new Audio(
-      "https://themushroomkingdom.net/sounds/wav/smw/smw_lemmy_wendy_incorrect.wav"
-    );
-    incorrectFX.play();
-  };
 
   const removeAnimations = () => {
     setTimeout(
@@ -44,32 +42,29 @@ const Counter = ({ limit, animationTimeout }) => {
       setMysteryBlockAnimation(true);
       removeAnimations();
     } else {
-      playIncorrectFX();
+      soundBoard.playError();
       setMysteryBlockAnimation(true);
       setTimeout(() => {
         setMysteryBlockAnimation(false);
       },
         animationTimeout);
-      
+
     }
   };
 
   const handleOnDecreaseClick = () => {
     if (counter > 0) {
       setCounter(counter - 1);
-      const decrementFX = new Audio(
-        "https://themushroomkingdom.net/sounds/wav/smw/smw_stomp_bones.wav"
-      );
-      decrementFX.play();
+      soundBoard.playDecrease();
     } else {
-      playIncorrectFX();
+      soundBoard.playError();
     }
   };
 
   return (
     <>
       <div className="row">
-        <CoinsLabel number={counter} padStart={5} padStr="0" />
+        <CoinsLabel number={counter} padStart={4} padStr="0" />
       </div>
       <div className="row App-Mystery-Block-row">
         <Coin
@@ -88,13 +83,13 @@ const Counter = ({ limit, animationTimeout }) => {
       <div className="row">
         <div className="col-4" />
         <div className="col-2">
-          <Button action="increase" id="increase_button" onClick={handleOnIncreaseClick}>
-            Increase
+          <Button id="decrease_button" onClick={handleOnDecreaseClick}>
+            Decrease
           </Button>
         </div>
         <div className="col-2">
-          <Button action="decrease" id="decrease_button" onClick={handleOnDecreaseClick}>
-            Decrease
+          <Button id="increase_button" className="increase-button" onClick={handleOnIncreaseClick}>
+            Increase
           </Button>
         </div>
         <div className="col-4" />

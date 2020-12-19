@@ -1,3 +1,7 @@
 .App-Mystery-Block-row {
   min-height: 27rem;
 }
+
+.increase-button {
+  padding-right: 0.8rem;
+}
