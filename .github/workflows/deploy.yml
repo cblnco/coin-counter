@@ -20,9 +20,15 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: yarn install
-    - run: yarn build
-    - run: .github/gh-pages/publish.sh
+
+    - name: Install project dependencies with yarn.
+      run: yarn install
+    
+    - name: Make project build.
+      run: yarn build
+    
+    - name: Publish to gh-pages branch.
+      run: .github/gh-pages/publish.sh
       env:
           DEPLOY_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
           MAINTANER_EMAIL: ${{ secrets.MAINTANER_EMAIL }}
