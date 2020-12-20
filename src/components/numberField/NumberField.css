@@ -4,6 +4,7 @@
   border: 2px solid #09d3ac;
   border-bottom: 2px solid #09d3ac;
   box-shadow: -1px 0px 0 4px #282c34, -6px 5px 0 2px #09d3ac;
+  transition: 0.2s ease-out;
 }
 
 .number-input {
@@ -24,6 +25,7 @@
   border: 0px solid transparent;
   cursor: pointer;
   transition: 0.1s linear;
+  height: 100%;
 }
 
 .number-button:hover {
@@ -48,4 +50,37 @@
 .number-button.left:active,
 .number-button.right:active {
   background-color: #0c9b7e;
+}
+
+@media only screen and (max-width: 50em) {
+  .number-field {
+    height: 3.5rem;
+    transition: 0.2s ease-out;
+  }
+
+  .number-input {
+    width: 44%;
+    height: 3.3rem;
+    font-size: 2rem;
+  }
+
+  .number-button {
+    font-size: 2rem;
+  }
+
+  .number-button.left {
+    padding-left: 21px;
+    padding-right: 21px;
+  }
+
+  .number-button.right {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media only screen and (max-width: 15em) {
+  .number-input {
+    width: 40%;
+  }
 }
