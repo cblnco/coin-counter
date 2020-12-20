@@ -16,7 +16,7 @@ git checkout "$target_branch"
 git rm -r *
 cp -a "${build_dir}/." .
 git add *
-git commit -m "[Workflow]: Updated GitHub Pages."
+git commit -m "[Workflow]: Updated gh-pages branch."
 
 if [ $? -ne 0 ]; then
     echo "No changes to commit"
