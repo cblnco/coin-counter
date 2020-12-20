@@ -17,3 +17,14 @@
   text-shadow: -4px 0 #1c1c1c, 0 4px #1c1c1c, 4px 0 #1c1c1c, 0 -4px #1c1c1c;
   color: #c4d4a4;
 }
+
+@media only screen and (max-width: 50em) {
+  .App-Coin-label-symbol {
+    font-size: 1.7rem;
+  }
+
+  .App-Coin-label-text {
+    font-family: 'Super Mario World';
+    font-size: 1.7rem;
+  }
+}
