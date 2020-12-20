@@ -12,3 +12,27 @@
 .App-button:active {
   margin-left: -4px;
 }
+
+@media only screen and (max-width: 50em) {
+  .App-button {
+    font-size: 1.7rem;
+    width: 50%;
+    bottom: 0;
+    height: 5rem;
+    position: fixed;
+    box-shadow: unset;
+  }
+}
+
+@media only screen and (max-height: 47em) {
+  .App-button {
+    height: 3rem;
+  }
+}
+
+@media only screen and (max-height: 43em) {
+  .App-button {
+    height: unset;
+    position: unset;
+  }
+}
