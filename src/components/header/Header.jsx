@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
+import PropTypes from 'prop-types';
 import logo from './logo.svg';
-import PropTypes from "prop-types";
-import "./Header.css";
+import './Header.css';
 
 const Header = ({ title }) => (
   <header className="App-header">
@@ -11,7 +11,7 @@ const Header = ({ title }) => (
 );
 
 Header.propTypes = {
-    title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
 };
 
 export default Header;

@@ -1,6 +1,6 @@
 {
   "name": "coin-counter",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "homepage": "/coin-counter",
   "private": true,
   "dependencies": {
@@ -18,13 +18,24 @@
     "build": "react-scripts build",
     "test-watch": "react-scripts test",
     "test": "react-scripts test --watchAll=false",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint --ext .js,.jsx src --color",
+    "lint-fix": "eslint --fix --ext .js,.jsx src --color",
+    "format": "prettier --write 'src/**/*.{js,jsx,css,json}'"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix"
   },
   "browserslist": {
     "production": [
@@ -37,5 +48,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.3.0",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4",
+    "husky": "^4.3.6",
+    "lint-staged": "^10.5.3",
+    "prettier": "^2.2.1"
   }
 }

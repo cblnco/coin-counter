@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
-import CoinsLabel from "../coinsLabel/CoinsLabel";
-import Coin from "../coin/Coin.jsx";
-import MysteryBlock from "../mysteryBlock/MysteryBlock";
-import soundBoard from "../../utils/soundBoard";
-import Button from "../button/Button";
-import PropTypes from "prop-types";
-import "./Counter.css";
+import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
+import CoinsLabel from '../coinsLabel/CoinsLabel';
+import Coin from '../coin/Coin';
+import MysteryBlock from '../mysteryBlock/MysteryBlock';
+import soundBoard from '../../utils/soundBoard';
+import Button from '../button/Button';
+import './Counter.css';
 
 const Counter = ({ limit, animationTimeout }) => {
   const [counter, setCounter] = useState(0);
@@ -18,21 +18,15 @@ const Counter = ({ limit, animationTimeout }) => {
     if (counter > limit) {
       setCounter(limit);
     }
-    
-    setTimeout(
-      () => setIsMysteryBlockActive(counter < limit),
-      animationTimeout
-    );
+
+    setTimeout(() => setIsMysteryBlockActive(counter < limit), animationTimeout);
   }, [counter, animationTimeout, limit]);
 
   const removeAnimations = () => {
-    setTimeout(
-      () => {
-        setCoinAnimation(false);
-        setMysteryBlockAnimation(false);
-      },
-      animationTimeout
-    );
+    setTimeout(() => {
+      setCoinAnimation(false);
+      setMysteryBlockAnimation(false);
+    }, animationTimeout);
   };
 
   const handleOnIncreaseClick = () => {
@@ -46,9 +40,7 @@ const Counter = ({ limit, animationTimeout }) => {
       setMysteryBlockAnimation(true);
       setTimeout(() => {
         setMysteryBlockAnimation(false);
-      },
-        animationTimeout);
-
+      }, animationTimeout);
     }
   };
 
@@ -64,26 +56,22 @@ const Counter = ({ limit, animationTimeout }) => {
   return (
     <>
       <div className="row">
-        <CoinsLabel number={counter} padStart={4} padStr="0" />
+        <CoinsLabel number={counter} padLength={4} padString="0" />
       </div>
       <div className="row App-Mystery-Block-row">
-        <Coin
-          id="main_coin"
-          defaultStyle
-          animation={coinAnimation}
-          alt="Coin"
-        />
+        <Coin id="main_coin" defaultStyle animation={coinAnimation} alt="Coin" />
         <MysteryBlock
           id="mystery_block"
           active={isMysteryBlockActive}
           animation={mysteryBlockAnimation}
           alt="Mystery Block"
+          onClick={handleOnIncreaseClick}
         />
       </div>
       <div className="row">
         <div className="col-4" />
         <div className="col-2">
-          <Button id="decrease_button" onClick={handleOnDecreaseClick}>
+          <Button id="decrease_button" className="decrease-button" onClick={handleOnDecreaseClick}>
             Decrease
           </Button>
         </div>
@@ -96,11 +84,15 @@ const Counter = ({ limit, animationTimeout }) => {
       </div>
     </>
   );
-}
+};
+
+Counter.defaultProps = {
+  animationTimeout: 200,
+};
 
 Counter.propTypes = {
   limit: PropTypes.number.isRequired,
-  animationTimeout: PropTypes.number
+  animationTimeout: PropTypes.number,
 };
 
 export default Counter;
