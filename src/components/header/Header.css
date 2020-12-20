@@ -49,3 +49,19 @@
     font-size: 0.9rem;
   }
 }
+
+@media only screen and (max-height: 50em) {
+  .App-header {
+    margin-bottom: 0.5rem;
+  }
+
+  .App-logo {
+    height: 2rem;
+    padding: 0.1rem;
+  }
+
+  .App-paragraph {
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+  }
+}
