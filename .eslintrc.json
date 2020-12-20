@@ -26,6 +26,7 @@
         "no-undef": "off",
         "object-curly-newline": "off",
         "import/no-extraneous-dependencies": "off",
-        "react/jsx-filename-extension": "off"
+        "react/jsx-filename-extension": "off",
+        "implicit-arrow-linebreak": "off"
     }
 }

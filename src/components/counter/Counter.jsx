@@ -56,7 +56,7 @@ const Counter = ({ limit, animationTimeout }) => {
   return (
     <>
       <div className="row">
-        <CoinsLabel number={counter} padStart={4} padStr="0" />
+        <CoinsLabel number={counter} padLength={4} padString="0" />
       </div>
       <div className="row App-Mystery-Block-row">
         <Coin id="main_coin" defaultStyle animation={coinAnimation} alt="Coin" />
@@ -65,6 +65,7 @@ const Counter = ({ limit, animationTimeout }) => {
           active={isMysteryBlockActive}
           animation={mysteryBlockAnimation}
           alt="Mystery Block"
+          onClick={handleOnIncreaseClick}
         />
       </div>
       <div className="row">
