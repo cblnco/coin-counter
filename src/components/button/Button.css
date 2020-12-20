@@ -27,7 +27,7 @@
 @media only screen and (max-height: 29em) {
   .App-button {
     height: unset;
-    position: unset;
+    position: absolute;
   }
 }
 
