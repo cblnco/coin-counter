@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/coin-counter/static/css/main.5e0e3fa0.chunk.css",
-    "main.js": "/coin-counter/static/js/main.a2a21030.chunk.js",
-    "main.js.map": "/coin-counter/static/js/main.a2a21030.chunk.js.map",
+    "main.css": "/coin-counter/static/css/main.645e964b.chunk.css",
+    "main.js": "/coin-counter/static/js/main.def6d680.chunk.js",
+    "main.js.map": "/coin-counter/static/js/main.def6d680.chunk.js.map",
     "runtime-main.js": "/coin-counter/static/js/runtime-main.0216b852.js",
     "runtime-main.js.map": "/coin-counter/static/js/runtime-main.0216b852.js.map",
-    "static/js/2.03dd390b.chunk.js": "/coin-counter/static/js/2.03dd390b.chunk.js",
-    "static/js/2.03dd390b.chunk.js.map": "/coin-counter/static/js/2.03dd390b.chunk.js.map",
+    "static/js/2.f2b7ed01.chunk.js": "/coin-counter/static/js/2.f2b7ed01.chunk.js",
+    "static/js/2.f2b7ed01.chunk.js.map": "/coin-counter/static/js/2.f2b7ed01.chunk.js.map",
     "index.html": "/coin-counter/index.html",
-    "static/css/main.5e0e3fa0.chunk.css.map": "/coin-counter/static/css/main.5e0e3fa0.chunk.css.map",
-    "static/js/2.03dd390b.chunk.js.LICENSE.txt": "/coin-counter/static/js/2.03dd390b.chunk.js.LICENSE.txt",
+    "static/css/main.645e964b.chunk.css.map": "/coin-counter/static/css/main.645e964b.chunk.css.map",
+    "static/js/2.f2b7ed01.chunk.js.LICENSE.txt": "/coin-counter/static/js/2.f2b7ed01.chunk.js.LICENSE.txt",
     "static/media/ActiveBlock.1f117f61.svg": "/coin-counter/static/media/ActiveBlock.1f117f61.svg",
     "static/media/Coin.ba5d8f5a.svg": "/coin-counter/static/media/Coin.ba5d8f5a.svg",
     "static/media/InactiveBlock.d68a21e6.svg": "/coin-counter/static/media/InactiveBlock.d68a21e6.svg",
@@ -17,8 +17,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.0216b852.js",
-    "static/js/2.03dd390b.chunk.js",
-    "static/css/main.5e0e3fa0.chunk.css",
-    "static/js/main.a2a21030.chunk.js"
+    "static/js/2.f2b7ed01.chunk.js",
+    "static/css/main.645e964b.chunk.css",
+    "static/js/main.def6d680.chunk.js"
   ]
 }
