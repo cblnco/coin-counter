@@ -71,7 +71,7 @@ const Counter = ({ limit, animationTimeout }) => {
       <div className="row">
         <div className="col-4" />
         <div className="col-2">
-          <Button id="decrease_button" onClick={handleOnDecreaseClick}>
+          <Button id="decrease_button" className="decrease-button" onClick={handleOnDecreaseClick}>
             Decrease
           </Button>
         </div>
