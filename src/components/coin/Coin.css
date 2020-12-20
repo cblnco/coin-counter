@@ -28,3 +28,12 @@
     opacity: 0;
   }
 }
+
+@media only screen and (max-height: 50em) {
+  .App-Coin {
+    height: 4rem;
+    bottom: 15.5rem;
+    left: 52%;
+    margin-left: -2rem;
+  }
+}

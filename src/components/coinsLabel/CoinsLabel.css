@@ -24,7 +24,16 @@
   }
 
   .App-Coin-label-text {
-    font-family: 'Super Mario World';
     font-size: 1.7rem;
+  }
+}
+
+@media only screen and (max-height: 50em) {
+  .App-Coin-label-symbol {
+    font-size: 1.2rem;
+  }
+
+  .App-Coin-label-text {
+    font-size: 1.3rem;
   }
 }

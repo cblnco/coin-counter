@@ -84,3 +84,30 @@
     width: 40%;
   }
 }
+
+@media only screen and (max-height: 50em) {
+  .number-field {
+    height: 2rem;
+    transition: 0.2s ease-out;
+  }
+
+  .number-input {
+    width: 39%;
+    height: 1.7rem;
+    font-size: 1.3rem;
+  }
+
+  .number-button {
+    font-size: 1.3rem;
+  }
+
+  .number-button.left {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .number-button.right {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
