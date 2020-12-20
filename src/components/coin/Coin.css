@@ -28,3 +28,25 @@
     opacity: 0;
   }
 }
+
+@media only screen and (max-width: 80em) and (max-height: 50em) {
+  .App-Coin {
+    height: 4rem;
+    bottom: 15rem;
+    left: 50%;
+  }
+}
+
+@media only screen and (max-width: 50em) and (max-height: 48em) {
+  .App-Coin {
+    height: 4rem;
+    left: 52%;
+    bottom: 3.5rem;
+  }
+}
+
+@media only screen and (max-width: 50em) and (max-height: 80em) {
+  .App-Coin {
+    bottom: 3.5rem;
+  }
+}

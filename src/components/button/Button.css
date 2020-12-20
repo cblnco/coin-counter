@@ -24,15 +24,16 @@
   }
 }
 
-@media only screen and (max-height: 47em) {
+@media only screen and (max-height: 29em) {
   .App-button {
-    height: 3rem;
+    height: unset;
+    position: absolute;
   }
 }
 
-@media only screen and (max-height: 43em) {
+@media only screen and (max-height: 50em) {
   .App-button {
-    height: unset;
-    position: unset;
+    font-size: 1.2rem;
+    height: 3rem;
   }
 }

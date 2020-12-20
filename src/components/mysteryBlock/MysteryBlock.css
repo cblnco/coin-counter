@@ -17,3 +17,17 @@
 .App-Mistery-Block-Btn.margin-top {
   margin-top: 12rem;
 }
+
+@media only screen and (max-height: 50em) {
+  .App-Mistery-Block {
+    height: 6rem;
+  }
+
+  .App-Mistery-Block-Btn {
+    margin-top: 10rem;
+  }
+
+  .App-Mistery-Block-Btn.margin-top {
+    margin-top: 8rem;
+  }
+}
