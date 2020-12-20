@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 1rem;
+  transition: 0.4s ease-in-out;
 }
 
 .App-logo {
@@ -15,4 +16,25 @@
   font-size: 1.8rem;
   margin-top: 0rem;
   margin-bottom: 0rem;
+}
+
+@media only screen and (max-width: 50em) {
+  .App-header {
+    flex-direction: initial;
+    justify-content: left;
+    background-color: #353a46;
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.2));
+    transition: 0.5s ease-out;
+    margin-bottom: 1.5rem;
+  }
+
+  .App-paragraph {
+    font-size: 1.4rem;
+    margin-left: 0.5rem;
+  }
+
+  .App-logo {
+    height: 4rem;
+    margin-left: 0.5rem;
+  }
 }
