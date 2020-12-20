@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/coin-counter/static/css/main.645e964b.chunk.css",
+    "main.css": "/coin-counter/static/css/main.a831c716.chunk.css",
     "main.js": "/coin-counter/static/js/main.def6d680.chunk.js",
     "main.js.map": "/coin-counter/static/js/main.def6d680.chunk.js.map",
     "runtime-main.js": "/coin-counter/static/js/runtime-main.0216b852.js",
@@ -8,7 +8,7 @@
     "static/js/2.f2b7ed01.chunk.js": "/coin-counter/static/js/2.f2b7ed01.chunk.js",
     "static/js/2.f2b7ed01.chunk.js.map": "/coin-counter/static/js/2.f2b7ed01.chunk.js.map",
     "index.html": "/coin-counter/index.html",
-    "static/css/main.645e964b.chunk.css.map": "/coin-counter/static/css/main.645e964b.chunk.css.map",
+    "static/css/main.a831c716.chunk.css.map": "/coin-counter/static/css/main.a831c716.chunk.css.map",
     "static/js/2.f2b7ed01.chunk.js.LICENSE.txt": "/coin-counter/static/js/2.f2b7ed01.chunk.js.LICENSE.txt",
     "static/media/ActiveBlock.1f117f61.svg": "/coin-counter/static/media/ActiveBlock.1f117f61.svg",
     "static/media/Coin.ba5d8f5a.svg": "/coin-counter/static/media/Coin.ba5d8f5a.svg",
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.0216b852.js",
     "static/js/2.f2b7ed01.chunk.js",
-    "static/css/main.645e964b.chunk.css",
+    "static/css/main.a831c716.chunk.css",
     "static/js/main.def6d680.chunk.js"
   ]
 }
