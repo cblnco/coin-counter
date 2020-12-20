@@ -30,12 +30,13 @@
 
   .App-logo {
     height: 4rem;
-    margin-left: 0.5rem;
+    background: #374d49;
+    padding: 0.2rem;
   }
 
   .App-paragraph {
     font-size: 1.4rem;
-    margin-left: 0.5rem;
+    margin-left: 1rem;
   }
 }
 
